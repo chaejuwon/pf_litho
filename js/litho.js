@@ -1120,6 +1120,7 @@
             var $winW  = $(window).innerWidth();
             var $slide  = $('#section12 .slide');
             var $slideW = $('#section12 .slide').innerWidth();
+            var toggle = 0;
 
             function resizeFn(){
                 $winW  = $(window).innerWidth();
@@ -1265,15 +1266,15 @@
                 //페럴럭스
                 $(window).scroll(function(){
                     if( $(window).scrollTop() == 0 ){
-                        t=0;
+                        toggle=0;
                         $('#section12 .wrap .gap .container .title').removeClass('addsec12');
                         $('#section12 .wrap .gap .container .content .slide-container').removeClass('addsec12');
                         $('#section12 .wrap .gap .container .content .cube .face').removeClass('addsec12');
                     }
 
                     if( $(window).scrollTop() >= $('#section12').offset().top-800 ){
-                        if(t == 0){
-                            t=1;
+                        if(toggle == 0){
+                            toggle=1;
                             $('#section12 .wrap .gap .container .title').addClass('addsec12');
                             $('#section12 .wrap .gap .container .content .slide-container').addClass('addsec12');
                             $('#section12 .wrap .gap .container .content .cube .face').addClass('addsec12');
